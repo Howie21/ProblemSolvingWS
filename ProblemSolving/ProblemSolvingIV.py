@@ -127,3 +127,18 @@ def sum_of_all_digits(string):
 
 # Pig Latin translation
 
+#Solving issues with List ----------------- 
+
+list_of_numbers = [5, 3, 54, 6, 4, 2, 6, 34]
+
+def largest_element(list_name):
+    counter = 0
+    iteration = 0
+    highest_value = list_name[counter]
+    for number in list_name:
+        if number > highest_value:
+            counter == iteration
+        iteration += 1
+    return highest_value
+
+print(largest_element(list_of_numbers))
