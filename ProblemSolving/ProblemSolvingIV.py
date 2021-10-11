@@ -23,8 +23,7 @@ def print_leap_years(year, number_of_leaps):
 
 #longest palindromic substring 
 
-test_string1 = 'aabbaa'
-test_string2 = 'abaababba'
+
 
 
 def reverse_string(string):
@@ -41,6 +40,9 @@ def check_palindrome(input):
 
 #recursion
 
+test_string1 = 'aabbaa'
+test_string2 = 'abaababba'
+
 def longest_palindromic_substring(string):
     string = string.lower()
     string_as_list = list(string)
@@ -55,10 +57,73 @@ def longest_palindromic_substring(string):
 # longest_palindromic_substring(test_string2)
 
 def absolute_diff(number, number2):
+    value = ""
     if number >= number2:
         value = number - number2
-        return 
     elif number2 > number:
         value = number2 - number
-        return value
+    
+    if value >= 13:
+        value = value * 2
+    return value 
+
+
+# absolute_diff(-12, 7)
+
+test_string3 = 'adefb'
+test_string4 = 'adesdfb'
+
+def check_seperation_of(character1, character2, string_variable, space_limit):
+    string_to_list = list(string_variable)
+    limitation = space_limit + 2
+    counter = 0
+    for letter in string_to_list:
+        if letter == character1:
+            for letter2 in string_to_list:
+                counter += 1
+                if letter == character1 and letter2 == character2:
+                    if counter == limitation:
+                        print(f'{character1} is {space_limit} spaces away from {character2}')
+                        return
+                    else:
+                        print(f'{character1} is not {space_limit} spaces away from {character2}, \nbut {character1} is {counter} spaces away from {character2}')
+
+
+# check_seperation_of("a", "b", test_string4, 3)
+
+equal_ts_and_ps = "ttttaaaapppp"
+non_equal_ts_and_ps = 'tttaaaaappppp'
+
+def same_amount_check(string, character1, character2):
+    character1_counter = 0
+    character2_counter = 0
+    for letter in string:
+        if letter == character1:
+            character1_counter += 1
+        elif letter == character2:
+            character2_counter += 1
+    if character1_counter == character2_counter:
+        print(f"There are an equal number of {character1}'s and {character2}'s")
+    else:
+        print(f"There are not an equal number of {character1}'s and {character2}'s \n")
+
+# same_amount_check(non_equal_ts_and_ps, "t", "p")
+
+
+number_string = "19234536"
+number_and_letters = 'asdf234526sdgdf'
+
+def sum_of_all_digits(string):
+    sum = 0
+    for number in string:
+        if number.isdigit():
+            sum += int(number)
+    print(sum)
+
+
+# sum_of_all_digits(number_and_letters)
+
+# proper or improper fractions
+
+# Pig Latin translation
 
