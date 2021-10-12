@@ -133,12 +133,25 @@ list_of_numbers = [5, 3, 54, 6, 4, 2, 6, 34]
 
 def largest_element(list_name):
     counter = 0
-    iteration = 0
     highest_value = list_name[counter]
     for number in list_name:
         if number > highest_value:
-            counter == iteration
-        iteration += 1
+            counter = list_name.index(number)
     return highest_value
 
-print(largest_element(list_of_numbers))
+# print(largest_element(list_of_numbers))
+
+
+given_list = [7, 17, 77, 50, 60, 22, 38]
+given_target = 55
+
+
+def return_numbers(some_list, some_target):
+    for number in some_list:
+        for number2 in some_list:
+            if number + number2 == some_target:
+                print(number, number2)
+            
+
+return_numbers(given_list, given_target)
+
