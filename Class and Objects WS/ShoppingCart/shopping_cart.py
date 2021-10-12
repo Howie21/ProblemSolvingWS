@@ -7,8 +7,7 @@ class ShoppingCart:
         self.total_of_items_in_cart = 0
         self.number_of_items_in_cart = 0
         
-    def add_item_to_cart(self, name, price, category):
-        item = Product(name, price, category)
+    def add_item_to_cart(self, item):
         self.what_is_in_the_cart.append(item)
         print(f'{item.name} successfully added to cart! ')
 

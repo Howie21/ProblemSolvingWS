@@ -6,8 +6,8 @@ class Customer:
         self.name = name
         self.cart = ShoppingCart()
     
-    def place_item_in_cart(self, name, price, category):
-        self.cart.add_item_to_cart(name, price, category)
+    def place_item_in_cart(self, item):
+        self.cart.add_item_to_cart(item)
     
     def take_all_items_out(self):
         self.cart.remove_all_items_from_cart()
